@@ -25,6 +25,7 @@
   - Fetch Data for Trailer video
   - Update store with trailer info
   - Embeded the youteube video and make it autoplay and mute
+  - fetched and displayed popular,nowplaying,top rated movies and tv series with custom hooks
   - 
 
   

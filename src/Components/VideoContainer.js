@@ -17,8 +17,9 @@ const VideoContainer = (props) => {
        <iframe
         className=' w-full h-full'
         src={`https://www.youtube.com/embed/${trailerVideo?.key}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=${trailerVideo?.key}&cc_load_policy=1&cc_lang_pref=en`}         
-        title="YouTube video player" frameborder="0" 
+        title="YouTube video player"  
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
         >
        </iframe>
 
