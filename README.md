@@ -17,7 +17,15 @@
   - bugfix - if user is not logoned protext the /browse route and vice versa
   - unsubscribe to the onauthstatechanged callback
   - Registered tmdb app and get the tmdb access token 
-  -
+  - Get data from tmdb and now playing movie list api
+  - Custom hook for now playing movies
+  - Create MovieSlice
+  - update store with movie data
+  - Planning for MovieContainer and Secondary Container
+  - Fetch Data for Trailer video
+  - Update store with trailer info
+  - Embeded the youteube video and make it autoplay and mute
+  - 
 
   
 
