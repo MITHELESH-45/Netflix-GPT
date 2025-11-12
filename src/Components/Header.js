@@ -5,10 +5,13 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
-import { profile_avatar } from '../utils/constant';
+import { langOptions, profile_avatar } from '../utils/constant';
+import { addGptToggle } from '../utils/gptSlice';
+import { changelanguage } from '../utils/configSlice';
 const Header = () => {
   const navigate=useNavigate();
   const user=useSelector(store=>store.user)
+  const gpt=useSelector(store=>store.gpt.gptToggle)
   const dispatch=useDispatch();
  
   const handleSignOut=()=>{
@@ -21,6 +24,14 @@ const Header = () => {
       });
 
   }
+
+  const handlelangchange=(e)=>{
+    dispatch(changelanguage(e.target.value));
+  }
+
+   const handleToggleGpt=()=>{
+     dispatch(addGptToggle());
+   }
 
     useEffect(()=>{
         
@@ -43,9 +54,23 @@ const Header = () => {
        className='w-44 '
        src={logo} alt='logo' />
        
-       { user && <div className='flex p-2'>
+       { user && <div className='flex  items-center space-x-3"'>
+       
+       {gpt && <select className='p-2 m-2 bg-gray-800 text-white'
+          onChange={handlelangchange}>
+          {langOptions.map((lang)=>(
+            <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
+          ))}
+       </select>}
+
+       <button 
+        onClick={handleToggleGpt}
+        className="px-3 py-3.5 bg-purple-600 mx-4 text-white text-sm rounded-lg shadow-md hover:bg-purple-700 hover:scale-105 transition-transform duration-200">
+          {gpt?"Home Page":"GPT Search"}
+        </button>
+
        <img
-        className='w-12 h-12 mt-4 '
+        className='w-12 h-12 mt-1 '
         src={profile_avatar}
        alt='profilelogo'/>
 

@@ -8,7 +8,7 @@ const MovieList = (props) => {
   //console.log(movies);
   return (
     <div className='px-4 '>
-        <h1 className='text-4xl font-bold text-red-500 py-6'>{title}</h1>
+        <h1 className='text-4xl font-bold text-white py-6'>{title}</h1>
         <div className='flex overflow-x-scroll'>
             
             <div className='flex'>

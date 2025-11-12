@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import {  addTvSeries } from "../utils/movieSlice";
+import { addTvSeries } from "../utils/movieSlice";
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constant";
 

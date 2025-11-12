@@ -26,7 +26,12 @@
   - Update store with trailer info
   - Embeded the youteube video and make it autoplay and mute
   - fetched and displayed popular,nowplaying,top rated movies and tv series with custom hooks
-  - 
+  - implemented gptslice store in redux for toggling gptsuggestions page in the browse page
+  - create searchgpt page 
+  - implemented multi language support for searchgpt page
+  - gpt search bar
+
+  
 
   
 
