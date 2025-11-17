@@ -32,7 +32,11 @@
   - gpt search bar
   - integrate with gemini api for movie suggestions and provided movies
   - completed movie suggestions page with gemini apis
-  - 
+  - displayed moviessuggesd by gemini using tmdb
+  - memoization
+  - safely securend api keys
+  - Made website responsive
+
 
   
 

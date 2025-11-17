@@ -49,12 +49,12 @@ const Header = () => {
     },[])
 
   return (
-    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between'>
+    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex  flex-col md:flex-row justify-between'>
        <img 
-       className='w-44 '
+       className='w-44 mx-auto md:mx-0'
        src={logo} alt='logo' />
        
-       { user && <div className='flex  items-center space-x-3"'>
+       { user && <div className='flex  items-center space-x-3 justify-between'>
        
        {gpt && <select className='p-2 m-2 bg-gray-800 text-white'
           onChange={handlelangchange}>
@@ -70,7 +70,7 @@ const Header = () => {
         </button>
 
        <img
-        className='w-12 h-12 mt-1 '
+        className='hidden md:block w-12 h-12 mt-1 '
         src={profile_avatar}
        alt='profilelogo'/>
 
