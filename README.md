@@ -1,59 +1,167 @@
-#Netflix-gpt
-  - Create react app
-  - Configured Tailwind css
-  - Routing
-  - Header
-  - LOGIN FORM
-  - sign up form
-  - Form validation
-  - Useref
-  - firebase setup
-  - deploy to production
-  - sign up a new user
-  - implement signin user api
-  - created redux store with userSlice
-  - implemented sign out
-  - update profile 
-  - bugfix - if user is not logoned protext the /browse route and vice versa
-  - unsubscribe to the onauthstatechanged callback
-  - Registered tmdb app and get the tmdb access token 
-  - Get data from tmdb and now playing movie list api
-  - Custom hook for now playing movies
-  - Create MovieSlice
-  - update store with movie data
-  - Planning for MovieContainer and Secondary Container
-  - Fetch Data for Trailer video
-  - Update store with trailer info
-  - Embeded the youteube video and make it autoplay and mute
-  - fetched and displayed popular,nowplaying,top rated movies and tv series with custom hooks
-  - implemented gptslice store in redux for toggling gptsuggestions page in the browse page
-  - create searchgpt page 
-  - implemented multi language support for searchgpt page
-  - gpt search bar
-  - integrate with gemini api for movie suggestions and provided movies
-  - completed movie suggestions page with gemini apis
-  - displayed moviessuggesd by gemini using tmdb
-  - memoization
-  - safely securend api keys
-  - Made website responsive
+# 🎬 Netflix-GPT — AI Powered Movie Recommender  
+A full-featured Netflix-style UI with AI-powered movie suggestions using **Google Gemini**, real-time movie data from **TMDB**, and user authentication via **Firebase**.  
+Includes autoplay trailers, GPT-based search, multilingual support, custom hooks, Redux integration, and a fully responsive Netflix-style design.
+
+---
+
+## 🚀 Live Demo  
+🔗 **https://netflix-gpt-alpha-plum.vercel.app/**
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- React (Create React App)
+- React Router
+- Redux Toolkit
+- Tailwind CSS
+- Custom Hooks
+- Memoization
+
+### **Backend & APIs**
+- Firebase Authentication
+- TMDB API
+- Google Gemini API
+- Hosted on **Vercel**
+
+---
+
+## 🌟 Features
+
+### 🔐 Authentication
+- Create account & Login using Firebase Auth  
+- Form validation using `useRef`  
+- Update display name & profile photo  
+- Protected `/browse` route  
+- Auto redirect based on auth  
+- Unsubscribe `onAuthStateChanged` on unmount  
+
+---
+
+### 🎥 Browse Page (Protected)
+- Netflix-style header & profile
+- Hero section with:
+  - Autoplay YouTube trailer
+  - Muted + Loop playback
+  - Gradient overlays
+- Movie rows:
+  - Now Playing  
+  - Popular Movies  
+  - Top Rated  
+  - TV Series  
+- Smooth horizontal scroll  
+- Hover zoom animation (Netflix-like)  
+
+---
+
+### 🤖 Netflix-GPT (AI Movie Suggestions)
+- GPT search interface  
+- Multi-language input  
+- Uses **Google Gemini API** for movie suggestions  
+- Gemini suggests names → TMDB fetches posters & details  
+- Responsive grid layout  
+
+---
+
+## 📁 Folder Structure
+
+src/
+components/
+Header.js
+Login.js
+Browse.js
+MovieCard.js
+VideoContainer.js
+GPTSearch.js
+hooks/
+useNowPlayingMovies.js
+usePopularMovies.js
+useMovieTrailer.js
+redux/
+userSlice.js
+movieSlice.js
+gptSlice.js
+appStore.js
+utils/
+firebase.js
+constants.js
+validate.js
+languages.js
 
 
-  
+---
 
-  
+## 📌 Development Journey (Milestones)
+- CRA setup  
+- Tailwind config  
+- Routing + Header  
+- Login / Signup page  
+- Firebase Auth  
+- Update profile  
+- Redux store  
+- Protected routes  
+- TMDB registration + API setup  
+- Now Playing / Popular / Top Rated movies  
+- Custom hooks for fetching movies  
+- Trailer fetch via TMDB `/videos`  
+- Autoplay YouTube iframe  
+- GPT Slice + toggle  
+- GPT search UI  
+- Multi-language support  
+- Gemini integration  
+- Secure API keys  
+- Fully responsive UI  
+- **Deployed on Vercel**
 
+---
 
- #features
- - Login and signup page
-   -sign in and sign up form
-   -redirect to browse page
- - Browse(after athentication)
-   - Header
-   - Main Movie
-     - Trailer in Background
-     - Title and Description
-     - Movie suggestions
-     - Movie Lists*n
- - Netflix gpt
-    -Search Bar
-    -Movie Suggestions       
+## ⚙️ Installation & Setup
+
+### Clone the repo
+```bash
+git clone https://github.com/yourusername/netflix-gpt.git
+cd netflix-gpt
+
+Install dependencies
+npm install
+
+Environment variables
+
+Create a .env file:
+
+REACT_APP_FIREBASE_API_KEY=xxxx
+REACT_APP_FIREBASE_AUTH_DOMAIN=xxxx
+REACT_APP_FIREBASE_PROJECT_ID=xxxx
+REACT_APP_TMDB_KEY=xxxx
+REACT_APP_GEMINI_API_KEY=xxxx
+
+Run locally
+npm start
+
+Build
+npm run build
+
+🚀 Deployment (Vercel)
+
+Push project to GitHub
+
+Import repo into Vercel
+
+Add environment variables
+
+Deploy and enjoy your live site
+
+🔮 Future Enhancements
+
+Watchlist system
+
+Continue Watching
+
+User reviews & ratings
+
+Multiple user profiles
+
+More advanced GPT prompts
+
+Actor/Director pages
