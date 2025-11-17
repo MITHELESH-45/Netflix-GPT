@@ -20,3 +20,7 @@ export const langOptions=[
   {identifier:"ta",name:"Tamil"},
   {identifier:"mal",name:"Malayalam"}
 ]
+
+
+
+

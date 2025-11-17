@@ -30,6 +30,9 @@
   - create searchgpt page 
   - implemented multi language support for searchgpt page
   - gpt search bar
+  - integrate with gemini api for movie suggestions and provided movies
+  - completed movie suggestions page with gemini apis
+  - 
 
   
 

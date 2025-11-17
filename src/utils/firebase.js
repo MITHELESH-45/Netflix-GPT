@@ -10,7 +10,7 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID,
   measurementId: "G-4P8ZSDYPR6"
 };
-
+console.log(firebaseConfig);
 const app = initializeApp(firebaseConfig);
 
 

@@ -6,7 +6,7 @@ import { bgUrl } from '../utils/constant'
 const GptSuggestions = () => {
   return (
     <div className=''>
-       <img className='absolute -z-10'
+       <img className='fixed -z-10'
        src={bgUrl}
              alt='logo'  />
       <GptSearchBar />

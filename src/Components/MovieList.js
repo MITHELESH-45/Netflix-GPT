@@ -4,8 +4,7 @@ import MovieCard from './MovieCard'
 const MovieList = (props) => {
 
   const {title,movies}=props;
-  //console.log(title);
-  //console.log(movies);
+  
   return (
     <div className='px-4 '>
         <h1 className='text-4xl font-bold text-white py-6'>{title}</h1>
